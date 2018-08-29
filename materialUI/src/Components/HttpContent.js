@@ -1,5 +1,6 @@
 import React from 'react';
-import ProvaCard from './ProvaCard'
+import ProvaCard from './ProvaCard';
+import './HttpContent.css';
 const axios = require('axios');
 
 class HttpContent extends React.Component {
@@ -34,7 +35,7 @@ class HttpContent extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="center">
                 {this.state.content.map((prova) => <ProvaCard key={prova.id} prova={prova} />)}
             </div>
         )

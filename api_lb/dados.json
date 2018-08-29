@@ -1,0 +1,21 @@
+{
+  "ids": {
+    "Prova": 4,
+    "inscricao": 7
+  },
+  "models": {
+    "Prova": {
+      "1": "{\"numero\":1,\"distancia\":50,\"estilo\":\"livre\",\"categoria\":\"infantil\",\"sexo\":\"feminino\",\"id\":1}",
+      "2": "{\"numero\":2,\"distancia\":50,\"estilo\":\"livre\",\"categoria\":\"infantil\",\"sexo\":\"masculino\",\"id\":2}",
+      "3": "{\"numero\":3,\"distancia\":50,\"estilo\":\"costas\",\"categoria\":\"juvenil\",\"sexo\":\"feminino\",\"id\":3}"
+    },
+    "inscricao": {
+      "1": "{\"nome\":\"José da Silva\",\"clube\":\"CEI\",\"tempoInscricao\":35.99,\"tempoFinal\":0,\"provaId\":2,\"inscricaoId\":0,\"id\":1}",
+      "2": "{\"nome\":\"Alberto Campos do Amaral\",\"clube\":\"Neves\",\"tempoInscricao\":32.78,\"tempoFinal\":0,\"provaId\":2,\"inscricaoId\":0,\"id\":2}",
+      "3": "{\"nome\":\"Flávia Aquino Leite\",\"clube\":\"Contemporâneo\",\"tempoInscricao\":34.27,\"tempoFinal\":0,\"provaId\":1,\"inscricaoId\":0,\"id\":3}",
+      "4": "{\"nome\":\"Giulia Mauá\",\"clube\":\"CEI\",\"tempoInscricao\":29.32,\"tempoFinal\":0,\"provaId\":1,\"inscricaoId\":0,\"id\":4}",
+      "5": "{\"nome\":\"Gisele Simplício de Morais\",\"clube\":\"CEI\",\"tempoInscricao\":28.34,\"tempoFinal\":0,\"provaId\":1,\"inscricaoId\":0,\"id\":5}",
+      "6": "{\"nome\":\"Mayara Gomes de Câmara\",\"clube\":\"IFRN\",\"tempoInscricao\":32.28,\"tempoFinal\":0,\"provaId\":3,\"inscricaoId\":0,\"id\":6}"
+    }
+  }
+}

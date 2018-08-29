@@ -1,0 +1,37 @@
+{
+  "name": "inscricao",
+  "plural": "inscricoes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "clube": {
+      "type": "string",
+      "required": true
+    },
+    "tempoInscricao": {
+      "type": "number",
+      "required": true,
+      "default": 3599.99
+    },
+    "tempoFinal": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "prova": {
+      "type": "belongsTo",
+      "model": "Prova",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

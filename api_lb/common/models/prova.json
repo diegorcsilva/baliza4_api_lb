@@ -1,0 +1,44 @@
+{
+  "name": "Prova",
+  "plural": "Provas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numero": {
+      "type": "number",
+      "required": true
+    },
+    "distancia": {
+      "type": "number",
+      "required": true
+    },
+    "estilo": {
+      "type": "string",
+      "required": true
+    },
+    "categoria": {
+      "type": "string",
+      "required": true
+    },
+    "sexo": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "inscricoes": {
+      "type": "hasMany",
+      "model": "inscricao",
+      "foreignKey": "provaId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -25,8 +25,11 @@ class HttpContent extends React.Component {
             },
         })
             .then((response) => {
-                console.log(response.data)
-                console.log(this.balizamento(response.data[0], 6))
+                //console.log(response.data)
+                for (var i = 0; i < response.data.length; i++) {
+                    response.data[i] = this.balizamento(response.data[i], 6);
+                }
+                //console.log(this.balizamento(response.data[0], 6))
                 this.setState({
                     content: response.data
                 })
@@ -39,8 +42,10 @@ class HttpContent extends React.Component {
         const ordem =[3, 4, 2, 5, 1, 6];  // Para 6 raias
         //ordem = array(4, 5, 3, 6, 2, 7, 1, 8);  // Para 8 raias
         const numAtletas = prova.inscricoes.length;
-        if (!numAtletas)
+        if (!numAtletas) {
+            prova.balizamento = [];
             return prova;
+        }
         var numSeries = Math.floor(numAtletas/numRaias);
         const resto = numAtletas % numRaias;
         var balizamento = [];
@@ -80,13 +85,13 @@ class HttpContent extends React.Component {
                 serieAtual = serieAtual.concat(atletaTemp);
             }
             serieAtual.sort(this.compare);
-            var serieFinal = {};
-            serieFinal.serie = numSerie
-            serieFinal.raias =  Object.assign({}, serieAtual);
+            //var serieFinal = {};
+            //serieFinal.serie = numSerie
+            //serieFinal.raias =  Object.assign({}, serieAtual);
             //console.log(serieFinal);
             k = atletasPorSerie;
-            balizamento = balizamento.concat(serieFinal);
-            //balizamento[numSeries] = {"serie" : numSeries, "raias" : serieAtual};
+            balizamento = balizamento.concat({"serie" : numSerie, "raias" : serieAtual});
+            //balizamento[numSeries] = {"serie" : numSerie, "raias" : serieAtual};
         }
         prova.balizamento = balizamento;
         return prova;

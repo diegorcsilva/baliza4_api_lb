@@ -10,11 +10,12 @@ import Collapse from '@material-ui/core/Collapse';
 //import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
+import SerieTable from "./SerieTable";
 //import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const styles = theme => ({
     card: {
-        maxWidth: 400,
+        maxWidth: 800,
         margin: 'auto',
     },
     media: {
@@ -52,7 +53,7 @@ class ProvaCard extends React.Component {
     render() {
         const { classes } = this.props;
         const prova = this.props.prova;
-        //console.log(this.props);
+        console.log(this.props.prova);
 
         return (
             <Card className={classes.card}>
@@ -76,9 +77,10 @@ class ProvaCard extends React.Component {
                 <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                     <CardContent>
                         <Typography paragraph>
-                          <ol>
+                            {prova.balizamento.map((serie) => <SerieTable key={serie.serie} serie={serie}/>)}
+                            {/*<ol>
                               {prova.inscricoes.map((atleta) => <li key={atleta.id}> {atleta.nome}</li>)}
-                          </ol>
+                          </ol>*/}
                         </Typography>
                     </CardContent>
                 </Collapse>

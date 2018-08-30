@@ -52,7 +52,7 @@ class ProvaCard extends React.Component {
     render() {
         const { classes } = this.props;
         const prova = this.props.prova;
-        console.log(this.props);
+        //console.log(this.props);
 
         return (
             <Card className={classes.card}>
